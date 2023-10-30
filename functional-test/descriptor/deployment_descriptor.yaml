@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: kalypso-app-src-stage-functional-test
+spec:
+  workload:
+    name: kalypso-app-src
+    source:
+        repo: https://github.com/kaizentm/kalypso-app-src
+        branch: main
+        path: .
+    application:
+        name: greeting
+        workspace:
+            name: kaizentm
+  deploymentTarget:
+    name: functional-test
+    environment: stage
+    manifests:
+        repo: https://github.com/kaizentm/kalypso-app-gitops
+        branch: stage
+        path: functional-test
+  workloadVersion:
+    version: 0.0.1-26
+    commit: f83aec5d1347390eebccbb2ec6d17d818baa9ec7
