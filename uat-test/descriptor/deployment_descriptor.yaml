@@ -21,5 +21,5 @@ spec:
         branch: stage
         path: uat-test
   workloadVersion:
-    version: 0.0.1-32
-    commit: 1750b31c477d2ec96f8a67692221e47d14e9740f
+    version: 0.0.1-36
+    commit: 23f1358ba8092641e83264df65bbc4bd9c4897ad
