@@ -2,6 +2,8 @@ apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
   name: kalypso-app-src-stage-uat-test
+  labels:
+      config-revision: 988e730d2b8ddd60969084b7eecf2ab4af46dcbd  
 spec:
   workload:
     name: hello
@@ -21,5 +23,5 @@ spec:
         branch: stage
         path: uat-test
   workloadVersion:
-    version: 0.0.1-32
-    commit: 1750b31c477d2ec96f8a67692221e47d14e9740f
+    version: 0.0.1-37
+    commit: 17872200c8228b54afe68df7072bfda197e6f228
