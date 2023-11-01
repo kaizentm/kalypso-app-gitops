@@ -3,7 +3,7 @@ kind: DeploymentDescriptor
 metadata:
   name: kalypso-app-src-dev-functional-test
   labels:
-      config-revision: 15c20e9fb2e3d8c32616640fd7efd185b7dc2544  
+      config-revision: 3095e20cded4cc39fc2842cd6bb4dbc2ee3cec04  
 spec:
   workload:
     name: hello
