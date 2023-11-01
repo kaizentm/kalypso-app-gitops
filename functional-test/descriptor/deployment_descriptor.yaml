@@ -2,6 +2,8 @@ apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
   name: kalypso-app-src-dev-functional-test
+  labels:
+      config-revision: 15c20e9fb2e3d8c32616640fd7efd185b7dc2544  
 spec:
   workload:
     name: hello
@@ -21,5 +23,5 @@ spec:
         branch: dev
         path: functional-test
   workloadVersion:
-    version: 0.0.1-36
-    commit: 23f1358ba8092641e83264df65bbc4bd9c4897ad
+    version: 0.0.1-37
+    commit: 17872200c8228b54afe68df7072bfda197e6f228
