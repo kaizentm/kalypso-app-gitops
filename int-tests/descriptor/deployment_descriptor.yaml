@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: kalypso-app-src-dev-performance-test
+  name: kalypso-app-src-dev-int-tests
 spec:
   workload:
     name: hello
@@ -14,12 +14,12 @@ spec:
         workspace:
             name: kaizentm
   deploymentTarget:
-    name: performance-test
+    name: int-tests
     environment: dev
     manifests:
         repo: https://github.com/kaizentm/kalypso-app-gitops
         branch: dev
-        path: performance-test
+        path: int-tests
   workloadVersion:
     version: 0.0.1-36
     commit: 23f1358ba8092641e83264df65bbc4bd9c4897ad
