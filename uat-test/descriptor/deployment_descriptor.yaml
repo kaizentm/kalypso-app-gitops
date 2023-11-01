@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: kalypso-app-src-stage-uat-test
+spec:
+  workload:
+    name: hello
+    source:
+        repo: https://github.com/kaizentm/kalypso-app-src
+        branch: main
+        path: .
+    application:
+        name: greeting
+        workspace:
+            name: kaizentm
+  deploymentTarget:
+    name: uat-test
+    environment: stage
+    manifests:
+        repo: https://github.com/kaizentm/kalypso-app-gitops
+        branch: stage
+        path: uat-test
+  workloadVersion:
+    version: 0.0.1-31
+    commit: 65b56880a770e2e143c1b9fb7be23045ecc10aed

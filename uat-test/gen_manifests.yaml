@@ -9,8 +9,8 @@ spec:
     app: hello-world
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 9092
+      targetPort: 9092
 ---
 # Source: hello-world/templates/deployment.yaml
 apiVersion: apps/v1
@@ -18,11 +18,11 @@ kind: Deployment
 metadata:
   name: hello-world-deployment
   annotations:
-    version: 0.0.1-22
+    version: 
 spec:
   strategy: 
     type: Recreate      
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: hello-world
@@ -31,17 +31,17 @@ spec:
       labels:
         app: hello-world      
       annotations:
-        version: 0.0.1-22
+        version: 
     spec:
       containers:
       - name: hello-world
-        image: ghcr.io/kaizentm/kalypso-app-src/hello-world:0.0.1-22
+        image: ghcr.io/kaizentm/kalypso-app-src/hello-world:0.0.1-31
         imagePullPolicy: Always
         ports:
-        - containerPort: 8000
+        - containerPort: 9092
         env:
         - name: PORT
-          value: "8000"
+          value: "9092"
         - name: CLUSTER_NAME
           valueFrom:
               configMapKeyRef:
