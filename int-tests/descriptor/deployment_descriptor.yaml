@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: kalypso-app-src-dev-functional-test
+  name: kalypso-app-src-dev-int-tests
 spec:
   workload:
     name: hello
@@ -14,12 +14,12 @@ spec:
         workspace:
             name: kaizentm
   deploymentTarget:
-    name: functional-test
+    name: int-tests
     environment: dev
     manifests:
         repo: https://github.com/kaizentm/kalypso-app-gitops
         branch: dev
-        path: functional-test
+        path: int-tests
   workloadVersion:
     version: 0.0.1-35
     commit: 2358f1f08ac6298d2e34e23e9abf816b4c763b5f
