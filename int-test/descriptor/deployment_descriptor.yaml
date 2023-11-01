@@ -1,0 +1,25 @@
+apiVersion: hub.kalypso.io/v1alpha1
+kind: DeploymentDescriptor
+metadata:
+  name: kalypso-app-src-dev-int-test
+spec:
+  workload:
+    name: hello
+    source:
+        repo: https://github.com/kaizentm/kalypso-app-src
+        branch: main
+        path: .
+    application:
+        name: greeting
+        workspace:
+            name: kaizentm
+  deploymentTarget:
+    name: int-test
+    environment: dev
+    manifests:
+        repo: https://github.com/kaizentm/kalypso-app-gitops
+        branch: dev
+        path: int-test
+  workloadVersion:
+    version: 0.0.1-36
+    commit: 23f1358ba8092641e83264df65bbc4bd9c4897ad
