@@ -23,5 +23,5 @@ spec:
         branch: dev
         path: int-test
   workloadVersion:
-    version: 0.0.1-37
-    commit: 17872200c8228b54afe68df7072bfda197e6f228
+    version: 0.0.1-41
+    commit: 23274e27c6d45e4d05a7a8b84a3b25cbe21aeaef
