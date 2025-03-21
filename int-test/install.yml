@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-  - debug: msg="Install application"
+  - debug: msg="Install application 1"
   - name: install application
     ansible.builtin.import_tasks: /opt/kalypso/install-deb-package.yml
     vars:
