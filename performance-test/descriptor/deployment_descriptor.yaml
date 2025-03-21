@@ -23,5 +23,5 @@ spec:
         branch: dev
         path: performance-test
   workloadVersion:
-    version: 0.0.1-41
-    commit: 23274e27c6d45e4d05a7a8b84a3b25cbe21aeaef
+    version: 0.0.1-46
+    commit: 7fd598b9f4ab660c3f985f5b045d00a29d6efade
