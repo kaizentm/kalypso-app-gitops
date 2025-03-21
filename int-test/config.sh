@@ -1,2 +1,2 @@
-export PORT=9093
+export PORT=9092
 
